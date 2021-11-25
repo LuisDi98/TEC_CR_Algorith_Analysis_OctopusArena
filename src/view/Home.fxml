@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TabPane fx:id="mainLayout" layoutX="-1.0" layoutY="-2.0" prefHeight="400.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Login">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="385.0" fitWidth="654.0" layoutY="-1.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/Arena.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="204.0" layoutY="50.0" prefHeight="109.0" prefWidth="232.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;">
+                                 <children>
+                                    <TextField fx:id="usernameInput" layoutX="27.0" layoutY="8.0" prefHeight="38.0" prefWidth="179.0" promptText="Username here:" style="-fx-background-radius: 16px; -fx-border-radius: 16px;" />
+                                    <Button fx:id="loginBtn" layoutX="71.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#onLoginClicked" prefHeight="37.0" prefWidth="89.0" style="-fx-border-radius: 16px; -fx-background-radius: 16px; -fx-background-color: #AAF5DD;" text="Login">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Config">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="saveBtn" layoutX="229.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#onSaveClicked" prefHeight="38.0" prefWidth="146.0" style="-fx-border-radius: 32px; -fx-background-radius: 32px; -fx-background-color: #C2FACF; -fx-border-color: #000000;" text="Save" />
+                              <TextField fx:id="secsXHourInput" layoutX="218.0" layoutY="92.0" prefHeight="26.0" prefWidth="163.0" promptText="Seconds per hour:" />
+                              <TextField fx:id="alphaCapacityInput" layoutX="218.0" layoutY="129.0" prefHeight="26.0" prefWidth="164.0" promptText="Alpha for Capacity on Arenas" />
+                              <TextField fx:id="alphaBetInput" layoutX="218.0" layoutY="164.0" prefHeight="26.0" prefWidth="166.0" promptText="Alpha for Bet on Arenas" />
+                              <Label layoutX="83.0" layoutY="24.0" text="Here we have all the configurations for the Application.">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="maxPlayersInput" layoutX="219.0" layoutY="200.0" prefHeight="26.0" prefWidth="166.0" promptText="Max Players per Day" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

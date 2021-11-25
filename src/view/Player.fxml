@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlayerController">
+   <children>
+      <Pane fx:id="listPane" prefHeight="600.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="arenabg" fitHeight="600.0" fitWidth="600.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/arenabg.jpg" />
+               </image>
+            </ImageView>
+            <ListView fx:id="arenasListView" layoutX="122.0" layoutY="90.0" onMouseClicked="#onArenaClicked" opacity="0.85" prefHeight="448.0" prefWidth="356.0" style="-fx-border-color: #000000;" />
+            <Label layoutX="121.0" layoutY="22.0" opacity="0.85" prefHeight="43.0" prefWidth="356.0" style="-fx-background-color: #FFFFFF;" text="Choose your battle arena!">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="arenaPane" disable="true" prefHeight="600.0" prefWidth="600.0" visible="false">
+         <children>
+            <Group fx:id="board" layoutX="300.0" layoutY="300.0" />
+            <ImageView fitHeight="600.0" fitWidth="600.0" opacity="0.85" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/combatbg.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="finishPane" disable="true" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #000000;" visible="false">
+         <children>
+            <ImageView fitHeight="636.0" fitWidth="600.0" layoutY="35.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/BattleEnd.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="earnedLabel" layoutX="14.0" layoutY="167.0" text="Money Earned: $" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="ticketLabel" layoutX="14.0" layoutY="271.0" text="New Ticket Day: " textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="34.0" text="The battle has ended." textFill="WHITE">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+            <Button layoutX="250.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#onExitPressed" prefHeight="45.0" prefWidth="100.0" style="-fx-border-radius: 16; -fx-background-radius: 16;" text="Exit">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
